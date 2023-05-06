@@ -1,22 +1,25 @@
 import Titulo from "./Componentes/Titulo";
 import Subtitulo from "./Componentes/Subtitulo";
+import "./index.css"
 
 function App() {
   return (
     <>
       <center>
-        <Titulo texto="Administrador de pacientes"></Titulo>
-      </center>
+        <Titulo texto="ADMINISTRADOR DE PACIENTES"></Titulo>
+        <br/>
+        <br/>
       <div className="container">
         <div className="row">
           <div className="one-half column">
-            <Subtitulo texto="Crear mi cita"></Subtitulo>
+            <Subtitulo texto="CREAR MI CITA"></Subtitulo>
           </div>
           <div className="one-half column">
-            <Subtitulo texto="Administra tus citas"></Subtitulo>
+            <Subtitulo texto="ADMINISTRA TUS CITAS"></Subtitulo>
           </div>
         </div>
       </div>
+      </center>
     </>
   );
 }
