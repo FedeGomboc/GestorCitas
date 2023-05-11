@@ -25,10 +25,6 @@ h1, h2  {
   box-sizing: border-box;
 }
 
-[type=button], [type=reset], [type=submit], button {
-  -webkit-appearance: button;
-}
-
 .button, button {
   margin-bottom: 1rem;
 }
@@ -97,6 +93,7 @@ input[type="time"] {
   background: white;
   border-bottom: 1px solid #e1e1e1;
   color: black;
+  outline: red dashed 1px;
 }
 
 .cita p {
