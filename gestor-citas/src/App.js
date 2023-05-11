@@ -3,6 +3,7 @@ import Subtitulo from "./Componentes/Subtitulo";
 import "./index.css";
 import Formulario from "./Componentes/Formulario";
 import Cita from "./Componentes/Cita";
+import ListadoCitas from "./Componentes/ListadoCitas";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           </div>
           <div className="one-half column">
             <Subtitulo texto="ADMINISTRA TUS CITAS"></Subtitulo>
-            <Cita />
+            <ListadoCitas />
           </div>
         </div>
       </div>
