@@ -18,7 +18,7 @@ export default function Formulario() {
         <Input tipo="time" name="hora" placeholder=""  />
         
         <TituloInput texto="Sintomas" />
-        <Input tipo="textarea" name="sintomas" placeholder=""/>
+        <textarea name="sintomas" className="u-full-width" placeholder=""/>
 
         <button type="submit" className="u-full-width button-primary">Agregar Cita</button>
       </form>

@@ -8,8 +8,10 @@ export default function ListadoCitas({ listaCitas }) {
             {listaCitas.map((cita) => (
                 <div key={cita.mascota}>
                     <Cita prop={cita} />
+                    <br/>
                 </div>
             ))}
+            
         </>
     )
 }
