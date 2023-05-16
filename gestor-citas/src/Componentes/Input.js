@@ -1,7 +1,7 @@
-export default function Input({tipo, nombre, placeholder, size}){
+export default function Input({tipo, id, placeholder, size}){
     return (
         <>
-            <input type={tipo} name={nombre} className="u-full-width" placeholder={placeholder}/>
+            <input type={tipo} id={id} className="u-full-width" placeholder={placeholder}/>
         </>
     )
 }
