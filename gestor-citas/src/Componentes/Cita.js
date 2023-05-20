@@ -1,11 +1,11 @@
-export default function Cita(prop) {
+export default function Cita(objeto) {
     return (
         <div className="cita">
-            <p>Mascota: <span>{prop.prop.mascota}</span></p>
-            <p>Dueño: <span>{prop.prop.dueno}</span></p>
-            <p>Fecha: <span>{prop.prop.fecha}</span></p>
-            <p>Hora: <span>{prop.prop.hora}</span></p>
-            <p>Sintomas: <span>{prop.prop.sintomas}</span></p>
+            <p>Mascota: <span>{objeto.objeto.mascota}</span></p>
+            <p>Dueño: <span>{objeto.objeto.dueno}</span></p>
+            <p>Fecha: <span>{objeto.objeto.fecha}</span></p>
+            <p>Hora: <span>{objeto.objeto.hora}</span></p>
+            <p>Sintomas: <span>{objeto.objeto.sintomas}</span></p>
 
             <button class="button elimnar u-full-width">Eliminar ×</button>
         </div>

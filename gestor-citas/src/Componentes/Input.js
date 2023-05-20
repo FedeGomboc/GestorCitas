@@ -1,7 +1,8 @@
-export default function Input({tipo, id, placeholder, size}){
+export default function Input({titulo, tipo, placeholder}){
     return (
         <>
-            <input type={tipo} id={id} className="u-full-width" placeholder={placeholder}/>
+            <label>{titulo}</label>
+            <input type={tipo} className="u-full-width" placeholder={placeholder}/>
         </>
     )
 }

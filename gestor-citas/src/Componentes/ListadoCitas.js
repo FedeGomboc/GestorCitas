@@ -1,13 +1,11 @@
 import Cita from "./Cita"
 
-export default function ListadoCitas({ listaCitas }) {
-
-
+export default function ListadoCitas( {listaCitas} ) {
     return (
         <>
-            {listaCitas.map((cita) => (
+            {listaCitas.map( (cita) => (
                 <div key={cita.mascota}>
-                    <Cita prop={cita} />
+                    <Cita objeto={cita} />
                     <br/>
                 </div>
             ))}
