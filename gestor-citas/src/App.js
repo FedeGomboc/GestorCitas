@@ -9,26 +9,14 @@ function App() {
 
   const [listaCitas, setListaCitas] = useState([])
 
-  const agregarCita = (mascota, dueno, fecha, hora, sintomas) => {
-    
-    const nuevaCita = 
-    {
-      id: new Date().getTime(),
-      mascota: mascota,
-      dueno: dueno,
-      fecha: fecha,
-      hora: hora,
-      sintomas: sintomas
-    }
-
-    setListaCitas([...listaCitas, nuevaCita])
+  const agregarCita = (cita) => {
+    setListaCitas([...listaCitas, cita])
   }
 
-  const citas = 
-  [
-    {id: 1, mascota: "Nina", dueno: "Martin", fecha: "2021-08-05", hora: "08:20", sintomas: "Le duele la pierna"},
-    {id: 2, mascota: "Roy", dueno: "Fede", fecha: "2020-01-06", hora: "17:45", sintomas: "Está gordito"},
-  ]
+  const eliminarCita = (id) => {
+    const nuevasCitas = listaCitas.filter((cita) => cita.id !== id);
+    setListaCitas(nuevasCitas);
+  }
 
   return (
     <div>
@@ -41,7 +29,7 @@ function App() {
           </div>
           <div className="one-half column">
             <Subtitulo texto="ADMINISTRA TUS CITAS"></Subtitulo>
-            <ListadoCitas listaCitas={citas} />
+            <ListadoCitas listaCitas={listaCitas} eliminarCita={eliminarCita}/>
           </div>
         </div>
       </div>

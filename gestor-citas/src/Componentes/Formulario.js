@@ -1,27 +1,43 @@
-import { useState } from "react";
 import Input from "./Input";
-
 
 export default function Formulario({onAgregarCita}) {
 
-  const [cita, setCita] = useState({mascota: '', dueno: '', fecha: '', hora: '', sintomas: ''})
+  const agregarCita = (e) => {
+    e.preventDefault()
+    
+    let nuevaCita = {
 
-  
+      id: new Date().getTime(),
+      mascota: e.target.inputMascota.value,
+      dueno: e.target.inputDueno.value,
+      fecha: e.target.inputFecha.value,
+      hora: e.target.inputHora.value,
+      sintomas: e.target.inputSintomas.value
+    } 
+
+    e.target.inputMascota.value = ''
+    e.target.inputDueno.value = ''
+    e.target.inputFecha.value = ''
+    e.target.inputHora.value = ''
+    e.target.inputSintomas.value = ''
+
+    onAgregarCita(nuevaCita)
+  }
   
   return (
-      <form>
-        <Input titulo="Nombre Mascota" tipo="text" placeholder="Nombre Mascota"  />
+      <form onSubmit={ (e) => agregarCita(e)}>
+        <Input titulo="Nombre Mascota" nombre="inputMascota" tipo="text" placeholder="Nombre Mascota"  />
 
-        <Input titulo="Nombre Dueño" tipo="text" placeholder="Nombre dueño de la mascota"  />
+        <Input titulo="Nombre Dueño" nombre="inputDueno" tipo="text" placeholder="Nombre dueño de la mascota"  />
 
-        <Input titulo="Fecha" tipo="date" placeholder=""  />
+        <Input titulo="Fecha" nombre="inputFecha" tipo="date" placeholder=""  />
 
-        <Input titulo="Hora" tipo="time" placeholder=""  />
+        <Input titulo="Hora" nombre="inputHora" tipo="time" placeholder=""  />
         
         <label>Sintomas</label>
-        <input type="textarea" className="u-full-width" placeholder=""/>
+        <textarea name="inputSintomas" className="u-full-width"/>
 
         <button type="submit" className="u-full-width button-primary">Agregar Cita</button>
       </form>
-  );
+  )
 }

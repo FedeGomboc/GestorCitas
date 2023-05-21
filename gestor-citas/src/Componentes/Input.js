@@ -1,8 +1,8 @@
-export default function Input({titulo, tipo, placeholder}){
+export default function Input({titulo, nombre, tipo, placeholder}){
     return (
         <>
             <label>{titulo}</label>
-            <input type={tipo} className="u-full-width" placeholder={placeholder}/>
+            <input type={tipo} name={nombre} className="u-full-width" placeholder={placeholder}/>
         </>
     )
 }
