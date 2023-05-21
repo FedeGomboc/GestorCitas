@@ -29,7 +29,7 @@ function App() {
           </div>
           <div className="one-half column">
             <Subtitulo texto="ADMINISTRA TUS CITAS"></Subtitulo>
-            <ListadoCitas listaCitas={listaCitas} eliminarCita={eliminarCita}/>
+            <ListadoCitas listaCitas={listaCitas} eliminar={(id) => eliminarCita(id)}/>
           </div>
         </div>
       </div>

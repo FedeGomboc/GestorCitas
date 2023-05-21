@@ -1,8 +1,10 @@
-export default function Cita(objeto, {onEliminarCita}) {
+export default function Cita(objeto) {
 
-   const eliminarCita = () => {
-    onEliminarCita(objeto.objeto.id)
-   }
+    const { onEliminar } = objeto;
+
+    const handleEliminar = () => {
+        onEliminar()
+    }
 
     return (
         <div className="cita">
@@ -12,7 +14,7 @@ export default function Cita(objeto, {onEliminarCita}) {
             <p>Hora: <span>{objeto.objeto.hora}</span></p>
             <p>Sintomas: <span>{objeto.objeto.sintomas}</span></p>
 
-            <button onclick={eliminarCita()} class="button elimnar u-full-width">Eliminar ×</button>
+            <button onClick={handleEliminar} class="button elimnar u-full-width">Eliminar ×</button>
         </div>
     )
 

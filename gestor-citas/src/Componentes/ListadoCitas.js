@@ -1,18 +1,19 @@
 import Cita from "./Cita"
 
-export default function ListadoCitas( {listaCitas, eliminarCita} ) {
-
-
+export default function ListadoCitas( {listaCitas, eliminar} ) {
     
+    const handleEliminar = (id) => {
+        eliminar(id)
+    } 
+
     return (
         <>
             {listaCitas.map( (cita) => (
                 <div key={cita.mascota}>
-                    <Cita objeto={cita} onEliminarCita={eliminarCita} />
+                    <Cita objeto={cita} onEliminar={() => handleEliminar(cita.id)}/>
                     <br/>
                 </div>
             ))}
-            
         </>
     )
 }
